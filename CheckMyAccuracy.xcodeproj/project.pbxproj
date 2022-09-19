@@ -11,6 +11,7 @@
 		AD246CC328D8EE3A00D09B4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD246CC228D8EE3A00D09B4D /* ContentView.swift */; };
 		AD246CC528D8EE3B00D09B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD246CC428D8EE3B00D09B4D /* Assets.xcassets */; };
 		AD246CC828D8EE3B00D09B4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD246CC728D8EE3B00D09B4D /* Preview Assets.xcassets */; };
+		AD246CCF28D8EEAC00D09B4D /* SliderUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD246CCE28D8EEAC00D09B4D /* SliderUIKitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AD246CC228D8EE3A00D09B4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD246CC428D8EE3B00D09B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD246CC728D8EE3B00D09B4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD246CCE28D8EEAC00D09B4D /* SliderUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUIKitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				AD246CC028D8EE3A00D09B4D /* CheckMyAccuracyApp.swift */,
 				AD246CC228D8EE3A00D09B4D /* ContentView.swift */,
+				AD246CCE28D8EEAC00D09B4D /* SliderUIKitView.swift */,
 				AD246CC428D8EE3B00D09B4D /* Assets.xcassets */,
 				AD246CC628D8EE3B00D09B4D /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD246CC328D8EE3A00D09B4D /* ContentView.swift in Sources */,
+				AD246CCF28D8EEAC00D09B4D /* SliderUIKitView.swift in Sources */,
 				AD246CC128D8EE3A00D09B4D /* CheckMyAccuracyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
