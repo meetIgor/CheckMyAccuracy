@@ -9,18 +9,17 @@ import SwiftUI
 
 struct SliderView: UIViewRepresentable {
     
-    @Binding var value: Float
-    let minValue: Float
-    let maxValue: Float
-    let thumbColor: UIColor
+    @Binding var value: Double
+    let minValue: Double
+    let maxValue: Double
+    let thumbOpacity: Int
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
         
-        slider.minimumValue = minValue
-        slider.maximumValue = maxValue
-        //slider.value = 50
-        slider.thumbTintColor = thumbColor
+        slider.minimumValue = Float(minValue)
+        slider.maximumValue = Float(maxValue)
+        slider.thumbTintColor = .systemRed.withAlphaComponent(CGFloat(thumbOpacity)/100)
         
         slider.addTarget(
             context.coordinator,
@@ -32,32 +31,35 @@ struct SliderView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = value
+        uiView.value = Float(value)
+        uiView.thumbTintColor = .systemRed.withAlphaComponent(CGFloat(thumbOpacity)/100)
     }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(value: $value)
     }
-
+    
 }
 
 extension SliderView {
     class Coordinator: NSObject {
-        @Binding var value: Float
+        @Binding var value: Double
         
-        init(value: Binding<Float>) {
+        init(value: Binding<Double>) {
             self._value = value
         }
         
         @objc func valueChanged(_ sender: UISlider) {
-            value = sender.value
+            value = Double(sender.value)
         }
     }
 }
 
 struct SliderView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        SliderView(value: .constant(50), minValue: 0, maxValue: 100, thumbColor: .systemPurple)
+        SliderView(value: .constant(50), minValue: 0, maxValue: 100, thumbOpacity: 100)
             .padding()
     }
+    
 }
