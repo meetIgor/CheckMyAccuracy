@@ -13,13 +13,13 @@ struct ContentView: View {
     @State private var target = Int.random(in: 0...100)
     @State private var showScore = false
     
-    var score: Int {
+    private var score: Int {
         let difference = abs(target - lround(value))
         return 100 - difference
     }
     
-    private let min = 0
-    private let max = 100
+    private let min = 0.0
+    private let max = 100.0
     
     var body: some View {
         
@@ -33,8 +33,8 @@ struct ContentView: View {
                 
                 SliderView(
                     value: $value,
-                    minValue: Double(min),
-                    maxValue: Double(max),
+                    minValue: min,
+                    maxValue: max,
                     thumbOpacity: score
                 )
                 
@@ -47,7 +47,7 @@ struct ContentView: View {
                 }
             
             Button("Try again") {
-                target = Int.random(in: min...max)
+                target = Int.random(in: lround(min)...lround(max))
             }
             
         }

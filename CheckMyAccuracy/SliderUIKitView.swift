@@ -10,6 +10,7 @@ import SwiftUI
 struct SliderView: UIViewRepresentable {
     
     @Binding var value: Double
+    
     let minValue: Double
     let maxValue: Double
     let thumbOpacity: Int
@@ -19,7 +20,6 @@ struct SliderView: UIViewRepresentable {
         
         slider.minimumValue = Float(minValue)
         slider.maximumValue = Float(maxValue)
-        slider.thumbTintColor = .systemRed.withAlphaComponent(CGFloat(thumbOpacity)/100)
         
         slider.addTarget(
             context.coordinator,
